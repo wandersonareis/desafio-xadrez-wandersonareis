@@ -46,7 +46,32 @@ int main() {
     } while (contador <= casas_rainha);
     printf("\n");
 
-    printf("FIM DA SIMULACAO\n");
+    // O Cavalo move-se em "L": duas casas em uma direção e uma casa perpendicularmente
+    // Simulando movimento de 2 casas para baixo e 1 casa para a esquerda
+    // Loop externo (for): controla as duas casas para baixo
+    // Loop interno (while): controla a uma casa para a esquerda
+    printf("Cavalo movendo em L (2 casas para baixo, 1 casa para a esquerda):\n");
+
+    // Constantes para o movimento do Cavalo
+    const int casas_cavalo_vertical = 2;   // Duas casas para baixo
+    const int casas_cavalo_horizontal = 1; // Uma casa para a esquerda
+
+    // Primeiro, move duas casas para baixo usando loop FOR
+    for (i = 1; i <= casas_cavalo_vertical; i++)
+    {
+        printf("Baixo\n");
+    }
+
+    // Depois, move uma casa para a esquerda usando loop WHILE
+    contador = 1;
+    while (contador <= casas_cavalo_horizontal)
+    {
+        printf("Esquerda\n");
+        contador++;
+    }
+    printf("\n");
+
+    printf("=== FIM DA SIMULACAO ===\n");
 
     return 0;
 }
